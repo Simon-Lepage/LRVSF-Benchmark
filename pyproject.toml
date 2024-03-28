@@ -1,0 +1,45 @@
+[project]
+name = "lrvsf_benchmark"
+version = "0.1"
+description = "LAION - RVS - Fashion Benchmark"
+readme = "README.md"
+authors = [{ email = "s.lepage@criteo.com" }]
+license = { file = "LICENSE" }
+keywords = ["benchmark", "embeddings", "rvs"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+]
+requires-python = ">=3.8.0"
+dependencies = ["torch", "tqdm", "pillow", "pandas", "numpy", "pyarrow", "pyyaml"]
+
+
+[project.urls]
+"Leaderboard" = "https://huggingface.co/spaces/Slep/LRVSF-Leaderboard"
+
+[project.optional-dependencies]
+dev = ["ruff>=0.0.254", "pytest", "pytest-xdist"]
+
+[tool.setuptools.packages.find]
+exclude = ["tests", "results"]
+
+
+[tool.ruff]
+target-version = "py38"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
+ignore = ["E203", "E501", "E741", "F403"]
+ignore-init-module-imports = true
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.flake8-annotations]
+mypy-init-return = true
+suppress-none-returning = true
