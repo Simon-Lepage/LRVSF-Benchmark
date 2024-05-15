@@ -1,4 +1,19 @@
-<h1 align="center">LAION RVS Fashion - Benchmark</h1>
+<div align="center">
+
+# LAION RVS Fashion - Benchmark
+Introduced in ***LRVSF-Fashion: Extending Visual Search with Referring Instructions***
+
+<a href="https://simon-lepage.github.io"><strong>Simon Lepage</strong></a>
+—
+<strong>Jérémie Mary</strong>
+—
+<a href=https://davidpicard.github.io><strong>David Picard</strong></a>
+
+<a href=https://ailab.criteo.com>CRITEO AI Lab</a>
+&
+<a href=https://imagine-lab.enpc.fr>ENPC</a>
+</div>
+
 <p align="center">
     <a href="https://arxiv.org/abs/2306.02928">
         <img alt="GitHub release" src="https://img.shields.io/badge/arXiv-2306.02928-b31b1b.svg">
@@ -6,14 +21,13 @@
     <img alt="Apache License" src="https://img.shields.io/badge/License-Apache_2.0-green.svg">
 </p>
 
-<h4 align="center">
-    <p>
-        <a href="https://huggingface.co/spaces/Slep/LRVSF-Leaderboard">Leaderboard</a> |
-        <a href="#installation">Installation</a> |
-        <a href="#usage">Usage</a> |
-        <a href="#citing">Citing</a>
-    <p>
-</h4>
+<div align="center">
+
+**Useful Links** <br>
+[Full Dataset](https://huggingface.co/datasets/Slep/LAION-RVS-Fashion) —
+[Test set](https://zenodo.org/doi/10.5281/zenodo.11189942) —
+[Leaderboard](https://huggingface.co/spaces/Slep/LRVSF-Leaderboard)
+</div>
 
 # Installation
 
@@ -29,7 +43,7 @@ pip install git+https://github.com/Simon-Lepage/LRVSF-Benchmark.git
 
 ## Dataset Preparation 📁
 
-We will provide a version of the test set on [zenodo.org](https://zenodo.org/) soon. It will contain : 
+We provide a [version of the test set]((https://zenodo.org/doi/10.5281/zenodo.11189942)) on zenodo.org. It contains : 
 - `products.parquet` : query and target images for each product, alongside with categorical and textual conditioning. The images were downloaded with img2dataset, and are stored in JPG format with shortest side resized to 256, keeping the original aspect ratio.
 - `distractors_urls.parquet` : URLs of the 2M test distractors. We also provide a script using [img2dataset](https://github.com/rom1504/img2dataset) to easily download the pictures.
 
@@ -98,11 +112,10 @@ Copy the content of the produced YAML output to the header of your `README.md` f
 
 # Citing
 
-LAION-RVS-Fashion was introduced in [Weakly-Supervised Conditional Embedding for Referred Visual Search](https://arxiv.org/abs/2306.02928). If this work is helpful for your research, please cite : 
-
+To cite our work, please use the following BibTeX entry :
 ```bibtex
-@article{lepage2023condvit,
-  title={Weakly-Supervised Conditional Embedding for Referred Visual Search},
+@article{lepage2023lrvsf,
+  title={LRVS-Fashion: Extending Visual Search with Referring Instructions},
   author={Lepage, Simon and Mary, Jérémie and Picard, David},
   journal={arXiv:2306.02928},
   year={2023}
