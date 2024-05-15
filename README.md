@@ -1,7 +1,7 @@
 <div align="center">
 
 # LAION RVS Fashion - Benchmark
-Introduced in ***LRVSF-Fashion: Extending Visual Search with Referring Instructions***
+Introduced in ***LRVS-Fashion: Extending Visual Search with Referring Instructions***
 
 <a href="https://simon-lepage.github.io"><strong>Simon Lepage</strong></a>
 —
